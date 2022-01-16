@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "5.3.1",
+    "generators": {
+      "sync-client": {
+        "generatorName": "typescript-angular",
+        "output": "src/sync-client",
+        "input-spec": "https://raw.githubusercontent.com/gwcult/anki-sync-openapi/master/openapi/openapi.bundle.yaml",
+        "template-dir": "src/sync-client-templates",
+        "additionalProperties": {
+          "ngVersion": "13.1.0",
+          "fileNaming": "kebab-case",
+          "serviceSuffix": "Client",
+          "serviceFileSuffix": ".client"
+        },
+        "globalProperty": {
+          "skipFormModel": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label for="syncUrl" class="form-label">Sync Url</label>
+    <input type="text" class="form-control" id="syncUrl" formControlName="syncUrl">
+  </div>
+  <ng-container formGroupName="credentials">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="u">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="p">
+    </div>
+  </ng-container>
+  <button type="submit" [disabled]="loading" class="btn btn-primary">Submit</button>
+</form>

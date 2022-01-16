@@ -1,0 +1,4 @@
+<app-login-form [loading]="loading" [initialData]="initialLoginData" class="d-block mb-3"
+    (submitted)="onLogInSubmitted($event)"></app-login-form>
+<p class="mb-3">HostKey: {{ hostKey$ | async }}</p>
+<button [disabled]="loading" class="btn btn-primary" (click)="sync()">Sync</button>

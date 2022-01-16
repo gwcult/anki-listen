@@ -1,0 +1,4 @@
+<p>Card: {{cardIndex + 1}}/{{cardsInDay}}</p>
+<p>Repetition: {{repetition + 1}}/{{repetitionsPerCard}}</p>
+<audio #player controls autoplay *ngIf="currentAudioUrl" [src]="currentAudioUrl" (ended)=audioEnded$.next()></audio>
+<p *ngIf="audioFound === false">No audio found in the deck</p>
